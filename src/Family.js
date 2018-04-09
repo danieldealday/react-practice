@@ -3,7 +3,7 @@ import Person from './Person.js';
 
 const Family = (props) => (
   <Fragment>
-    <p>Here is a Family Component</p>
+    <h2>Here is a Family Component</h2>
     <Person />
     <Person />
   </Fragment>

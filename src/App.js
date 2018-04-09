@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <Provider>
-        <p>I'm the App</p>
+        <h1>I'm the App</h1>
         <Family />
       </Provider>
     );
