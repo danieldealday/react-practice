@@ -1,24 +1,7 @@
 import React, { Component, Fragment } from 'react';
-import Context from './Context.js';
-import Family from './Family.js';
+import { MyContext } from './MyProvider.js';
 
-class App extends Component {
-  state = {
-    name: 'Daniel',
-    energy: 9000,
-    cool: true
-  }
-  render() {
-    return (
-      <MyProvider>
-        <p>I'm the App</p>
-        <Family/>
-      </MyProvider>
-    );
-  }
-}
-
-class Person extends Component {
+export default class Person extends Component {
   render () {
     return (
       // sibling components cannot be added and the render functions must be used to pass context information
@@ -37,5 +20,3 @@ class Person extends Component {
     )
   }
 }
-
-export default App;
