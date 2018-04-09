@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import MyProvider from './MyProvider.js';
+import Provider from './Provider.js';
 import Family from './Family.js';
 
 class App extends Component {
@@ -10,10 +10,10 @@ class App extends Component {
   }
   render() {
     return (
-      <MyProvider>
+      <Provider>
         <p>I'm the App</p>
         <Family/>
-      </MyProvider>
+      </Provider>
     );
   }
 }
