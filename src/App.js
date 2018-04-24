@@ -1,16 +1,28 @@
-import React, { Component } from 'react';
-import Provider from './Provider.js';
-import Family from './Family.js';
+import React, { Component, Fragment } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import NavBar from './components/NavBar';
+import List from './views/List';
+import Calendar from './views/Calendar';
+import Contacts from './views/Contacts';
+import Home from './views/Home';
 
-class App extends Component {
+
+export default class App extends Component {
+  let = {
+    username: 'daniel',
+    password: '1234'
+  }
   render() {
     return (
-      <Provider>
-        <h1>I'm the App</h1>
-        <Family />
-      </Provider>
-    );
+        <Router>
+          <Fragment>
+            <NavBar/>
+            <Route exact path="/" component={Home} />
+            <Route path="/list" component={List} />
+            <Route path="/calendar" component={Calendar} />
+            <Route path="/contacts" component={Contacts} />
+          </Fragment>
+        </Router>
+    )
   }
 }
-
-export default App;

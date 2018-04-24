@@ -1,11 +1,21 @@
 import React, { Component } from 'react';
 import Context from './Context.js';
 
-class Provider extends Component {
+export default class Provider extends Component {
   state = {
-    name: 'Daniel',
-    energy: 9000,
-    cool: true
+    info: 'info',
+    jobs: [
+      {
+        companyName: "Google",
+        status: "active",
+        interviewDate: new Date()
+      },
+      {
+        companyName: "Space X",
+        status: "inactive",
+        interviewDate: new Date()
+      }
+    ]
   }
   render () {
     return (
@@ -15,5 +25,3 @@ class Provider extends Component {
     )
   }
 }
-
-export default Provider;
