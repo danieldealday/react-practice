@@ -6,7 +6,9 @@ import Better from '../components/Better';
 export default class Contacts extends Component {
 
   render () {
+    // deconstruction of props to pass to Routes
     let {match} = this.props;
+    // log to show `match` object: params, url, path
     console.log(match);
     return (
       <Fragment>
