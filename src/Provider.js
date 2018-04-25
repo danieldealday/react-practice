@@ -3,9 +3,18 @@ import Context from './Context.js';
 
 class Provider extends Component {
   state = {
-    name: 'Daniel',
-    energy: 9000,
-    cool: true
+    data: [
+      {
+        name: 'Daniel',
+        energy: 9000,
+        cool: true
+      },
+      {
+        name: 'Stylgen',
+        energy: 800,
+        cool: false
+      }
+    ]
   }
   render () {
     return (

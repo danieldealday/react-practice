@@ -6,16 +6,22 @@ export default class Person extends Component {
     return (
       // sibling components cannot be added and the render functions must be used to pass context information
       <Context.Consumer>
-        {(context) => (
-          <Fragment>
-            <p>
-             I'm inside the Consumer - Name: {context.state.name}
-            </p>
-             <p>
-               I'm inside the Consumer - Energy: {context.state.energy}
-            </p>
-          </Fragment>
-        )}
+        {(context) => {
+          return (
+            <Fragment>
+              {context.state.data.map((item, index) => {
+                return (
+                  <Fragment>
+                  <h1>{index}</h1>
+                  <h2>{item.name}</h2>
+                  <h2>{item.energy}</h2>
+                  <h2>{item.cool}</h2>
+                  </Fragment>
+                )
+              })}
+            </Fragment>
+          )
+        }}
       </Context.Consumer>
     )
   }
