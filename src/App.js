@@ -5,11 +5,11 @@ class App extends Component {
   state = {
     header: "Hi, I'm Daniel",
     age: 30,
-    cool: true
+    cool: true,
     likes: ['anime', "weightlifting", "lo-fi", "fantasy"],
     dislikes: 'sadness'
     }
-  }
+
   render() {
     return (
       <Fragment>
