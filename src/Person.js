@@ -6,14 +6,15 @@ export default class Person extends Component {
     return (
       // sibling components cannot be added and the render functions must be used to pass context information
       <Context.Consumer>
-        {(context) => (
+        {({state, actions}) => (
           <Fragment>
             <p>
-             I'm inside the Consumer - Name: {context.state.name}
+             I'm inside the Consumer - Name: {state.name}
             </p>
              <p>
-               I'm inside the Consumer - Energy: {context.state.energy}
+               I'm inside the Consumer - Energy: {state.energy}
             </p>
+            <button onClick={actions.goSuper}>Talk</button>
           </Fragment>
         )}
       </Context.Consumer>

@@ -7,9 +7,18 @@ class Provider extends Component {
     energy: 9000,
     cool: true
   }
+
+  actions = {
+    goSuper: () => {
+      this.setState({
+        name: 'Super Saiyan Daniel'
+      });
+      console.log(this.state.name);
+    }
+  }
   render () {
     return (
-      <Context.Provider value={{state: this.state}}>
+      <Context.Provider value={{state: this.state, actions: this.actions}}>
         {this.props.children}
       </Context.Provider>
     )
