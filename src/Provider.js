@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Context from './Context.js';
-
+import reducers from './reducers.js';
 class Provider extends Component {
   state = {
     name: 'Daniel',
@@ -8,14 +8,17 @@ class Provider extends Component {
     cool: true
   }
 
-  actions = {
-    goSuper: () => {
-      this.setState({
-        name: 'Super Saiyan Daniel'
-      });
-      console.log(this.state.name);
-    }
-  }
+  actions = reducers.map( e => e);
+
+  // actions = {
+  //   goSuper: () => {
+  //     this.setState({
+  //       name: 'Super Saiyajin Daniel'
+  //     });
+  //     console.log(this.state.name);
+  //   }
+  // }
+
   render () {
     return (
       <Context.Provider value={{state: this.state, actions: this.actions}}>

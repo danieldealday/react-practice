@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import Context from './Context.js';
 
+
+
 export default class Person extends Component {
   render () {
     return (
